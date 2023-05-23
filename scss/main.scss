@@ -1,0 +1,51 @@
+@import "fonts";
+@import "variables";
+@import "utilities";
+@import "funcs";
+
+//Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $font-family-vazir;
+  line-height: 1.6;
+  background: #333;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+
+  ul{
+    display: flex;
+  }
+  li{
+    padding: 1rem 1.5rem;
+  }
+  a{
+    color: #ffffff;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    @include transition(border-color, 0.5s);
+    &:hover{
+      border-color: $medium-color ;
+    }
+  }
+}
