@@ -99,7 +99,7 @@ img {
       li {
         line-height: 2;
 
-        &.items-title{
+        &.items-title {
           font-size: 1.5rem;
         }
 
@@ -109,16 +109,98 @@ img {
         }
       }
 
-      div{
+      div {
         padding: 3rem 0;
+
         &:nth-child(odd) {
           background: $primary-color;
           color: #ffffff;
         }
 
-        &:nth-child(even){
+        &:nth-child(even) {
           background: $light-color;
         }
+      }
+    }
+  }
+
+  &-3 {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      //process-step
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $primary-color;
+        color: set-text-color($primary-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        @include transition(all, 1s)
+      }
+
+      //process-icon
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        @include transition(all, 1s);
+
+        &:hover {
+          background: $primary-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+//Footer
+#main-footer {
+  background: $dark-color;
+  color: #ffffff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #ffffff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $primary-color;
+        cursor: pointer;
       }
     }
   }
